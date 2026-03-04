@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        <a href="project-2/index.html">Project 2 </a> 
+        hmtl {
+        height: 100%; 
+        margin:0; 
+        }
+        body{ 
+             min-height: 100vh;
+            margin: 0;
+        background-image:url("assets/grass.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        } 
+         #notebook {
+            position: absolute;
+             top: 150px;
+             left: 50%;
+             transform: translateX(-50%);
+            width: 800px;
+        }
+       #text {
+            position: absolute;
+             top: 250px;
+             left: 64%;
+            transform: translateX(-55%);
+            width: 353px;
+            font-family:"Courier New", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: black;
+            z-index: 1;
+            opacity: 0; 
+            transition: opacity 5s; 
+        }
+        
+#text:hover {
+    opacity: 1;
+        }
+        #startbutton { 
+            position:absolute; 
+            top: 560px;
+            left: 51%;
+            width: 353px;
+            z-index: 1;  
+            color:black;
+        }
+        #instructions {
+            position:absolute;
+            top: 495px; 
+            left: 51%; 
+            width:350px;
+            font-family:"Courier New", monospace;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 20px;
+            z-index: 1; 
+        }
+
+}
+
+}
+        
+    </style>
+</head>
+<body>
+   <p id="text"> To the ones who say it's fine, and then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it. Let's begin.
+    </p>
+    <p id="instructions"> Don't overthink it. This only works if you choose. </p>
+    <p id="startbutton"> <a href= "page-2.html"> Press Start </a>
+    </p>
+    <img src="assets/notebookpage.png" id="notebook" />
+   
+</body>
+</html>
+      
