@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-6</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        hmtl {
+        height: 100%; 
+        margin:0; 
+        }
+        body{ 
+             min-height: 100vh;
+            margin: 0;
+            background-color: #FFFBEA
+        }
+        #UnsaidText {
+        position: absolute;
+             top: 10px;
+             left: 50%;
+            transform: translateX(-55%);
+            width: 500px;
+            font-family:"Inter", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: saddlebrown;   
+        }
+        #unsaidsubtext{ 
+            position: absolute;
+             top: 100px;
+             left: 50%;
+            transform: translateX(-55%);
+            width: 400px;
+            color: black; 
+        }
+        
+        #refresh{ 
+         position: absolute;
+        top: 800px;
+        left: 50%;
+        transform: translateX(-55%);
+        width: 300px;
+        font-family:"Inter", sans-serif;
+        font-weight: 500;
+         font-style: normal;
+         font-size: 15px;
+         color: black;   
+        }
+       }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="UnsaidText">The Unsaid Sentences.</h1>
+        <p id="unsaidsubtext"> The ones you rehearse. The ones you swallow. The ones you think about later in the shower. <br /> Click the sentence I didn't say. </p> 
+      <script>
+    const text = "The ones you rehearse. The ones you swallow. The ones you think about later in the shower. Click the sentence I didn't say.";
+    const el = document.getElementById('unsaidsubtext');
+    el.textContent = '';
+    let i = 0;
+    setInterval(() => {
+        if (i < text.length) {
+            el.textContent += text[i];
+            i++;
+        }
+    }, 80);
+</script>
+       <p id="ilikeyou" onclick="document.getElementById('ilikeyouimg').style.display='block'">I like you.</p>
+       <img src="assets/ilikeyoutext.png" id="ilikeyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        <a href="page-7.html"><p id="thathurt"> That hurt. </p></a>
+        <a href="page-7.html"><p id="imissyou">I miss you.</p></a>
+        <a href="page-7.html"><p id="imnotokay">I'm not okay. </p></a>
+        <a href="page-7.html"><p id="stay">Stay.</p></a>
+        <a href="page-7.html"><p id="ineededyou">I needed you.</p></a>
+        <a href="" onclick="location.reload()"><p id="refresh">Choose another sentence.</p></a>
