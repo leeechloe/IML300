@@ -48,6 +48,17 @@
          font-size: 15px;
          color: black;   
         }
+        #nextpage7{ 
+         position: absolute;
+        top: 800px;
+        left: 95%;
+        transform: translateX(-55%);
+        width: 300px;
+        font-family:"Inter", sans-serif;
+        font-weight: 500;
+         font-style: normal;
+         font-size: 15px;
+         color: black;   
        }
 
         </style>
@@ -65,13 +76,29 @@
             el.textContent += text[i];
             i++;
         }
-    }, 80);
+    }, 80); 
 </script>
        <p id="ilikeyou" onclick="document.getElementById('ilikeyouimg').style.display='block'">I like you.</p>
        <img src="assets/ilikeyoutext.png" id="ilikeyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        <a href="page-7.html"><p id="thathurt"> That hurt. </p></a>
-        <a href="page-7.html"><p id="imissyou">I miss you.</p></a>
-        <a href="page-7.html"><p id="imnotokay">I'm not okay. </p></a>
-        <a href="page-7.html"><p id="stay">Stay.</p></a>
-        <a href="page-7.html"><p id="ineededyou">I needed you.</p></a>
+    
+        <p id="thathurt" onclick="document.getElementById('thathurtimg').style.display='block'"> That hurt.</p>
+        <img src="assets/thathurttext.png" id="thathurtimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        
+          <p id="imissyou" onclick="document.getElementById('imissyouimg').style.display='block'"> I miss you.</p>
+        <img src="assets/imissyoutext.png" id="imissyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        
+    
+        <p id="imnotokay" onclick="document.getElementById('imnotokayimg').style.display='block'"> I'm not okay. </p>
+        <img src="assets/imnotokaytext.png" id="imnotokayimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        
+      
+        <p id="stay" onclick="document.getElementById('stayimg').style.display='block'"> Stay. </p>
+        <img src="assets/staytext.png" id="stayimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        
+        
+        <p id="ineededyou" onclick="document.getElementById('ineededyouimg').style.display='block'"> I needed you. </p>
+        <img src="assets/ineededyoutext.png" id="ineededyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
+        
+        
         <a href="" onclick="location.reload()"><p id="refresh">Choose another sentence.</p></a>
+         <a href="page-7.html"><p id="nextpage7"> next. </p></a>
