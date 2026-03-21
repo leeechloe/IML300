@@ -20,24 +20,14 @@
         background-repeat: no-repeat;
         background-position: center;
         } 
-         #notebook {
+         #indexmessage {
             position: absolute;
              top: 150px;
              left: 50%;
              transform: translateX(-50%);
-            width: 800px;
+            width: 700px;
         }
-       #text {
-        position: absolute;
-        top: 320px;
-        left: 64%;
-        transform: translateX(-55%);
-        width: 350px;
-        font-family: "Courier New", monospace;
-        font-size: 20px;
-        color: black;
-        z-index: 1;
-    }
+    
         #startbutton { 
             position:absolute; 
             top: 630px;
@@ -46,17 +36,7 @@
             z-index: 1;  
             color:black;
         }
-        #instructions {
-            position:absolute;
-            top: 535px; 
-            left: 51%; 
-            width:350px;
-            font-family:"Courier New", monospace;
-            font-weight: 200;
-            font-style: normal;
-            font-size: 20px;
-            z-index: 1; 
-        }
+       
 
 }
         
@@ -66,21 +46,21 @@
     <p id="instructions"> Don't overthink it. This only works if you choose. </p>
     <p id="startbutton"> <a href= "page-2.html"> Press Start </a>
     </p>
-    <img src="assets/notebookpage.png" id="notebook" />
-   <p id="text"></p>
-    <img src="assets/notebookpage.png" id="notebook" />
-      <audio id="typingsound" src="assets/typing.mp3" autoplay loop></audio>
+    <img src="assets/indexmessage.png" id="indexmessage" />
+    <p id="text"></p>
+    <img src="assets/indexmessage.png" id="indexmessage" />
+      <audio id="iphonetext" src="assets/iphonetext.mp3" autoplay loop></audio>
     <script>
         const text = "To the ones who say it's fine, and then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it. Let's begin.";
         const el = document.getElementById('text');
         let i = 0;
-         const sound = document.getElementById('typingsound');
+         const sound = document.getElementById('iphonetext');
         setInterval(() => {
     if (i < text.length) {
         el.textContent += text[i];
         i++;
     } else {
-        sound.pause();
+        sound.loop();
     }
     }, 100);
     </script>

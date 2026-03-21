@@ -1,0 +1,232 @@
+#indexmessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#text {
+    position: absolute;
+    top: 460px;
+    left: 41%;
+    width: 380px;
+    font-family: "Inter", sans-serif;
+    font-size: 50x;
+    text-align: left;
+    white-space: pre-wrap;
+    color: black;
+    z-index: 1;
+}
+ #instructions {
+      position:absolute;
+      top: 48.8%; 
+     left: 40.4%; 
+     width: 420px;
+     font-family:"Inter", sans-serif;
+     font-size: 16x;
+      z-index: 1; 
+        }
+
+#startbutton:hover{ 
+cursor: pointer; 
+color: hotpink;
+transition: color 0.3s 
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #EEDAE6;
+    text-align: center;
+}
+#matcha {
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    transform: translateX(-50%);
+}
+#matcha {
+    display: block;
+    margin: 0 auto;
+}
+
+#idk {
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s;
+}
+
+#idk:hover {
+    color: whitesmoke;
+}
+
+ilikeyou:hover {
+color: whitesmoke
+}
+
+
+h1 {
+    font-family: "Inter", sans-serif;
+}
+#next:hover{ 
+cursor:pointer;
+color:hotpink;
+transition: color 0.3s
+}
+#back:hover { 
+cursor:pointer;
+color:hotpink;
+transition: color 0.3s
+}
+#before:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#after:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#both:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#no:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+
+#ilikeyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#thathurt:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#imissyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#imnotokay:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#ilikeyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#stay:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#ineededyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#text1 {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: whitesmoke;
+    animation: fadeIn 5s ease-in;
+}
+#ilikeyou{ 
+     position: absolute;
+     top: 300px;
+      left: 50%;
+     transform: translateX(-55%);
+     width: 300px;
+     font-family:"Inter", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+      font-size: 15px;
+     color: black; 
+}
+#thathurt{ 
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+#imissyou{ 
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+#imnotokay {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+#stay{ 
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+#ineededyou{ 
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+#refresh{ 
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
