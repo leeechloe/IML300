@@ -1,88 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+        <a href="project-2/index.html">Project 2 </a> 
+        hmtl {
+        height: 100%; 
+        margin:0; 
         }
-
-        body {
-            background-image: url("assets/grass.gif");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
+        
+        body{ 
+         min-height: 100vh;
+         margin: 0;
+        background-image:url("assets/grass.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        } 
+        
         .container {
-            width: 390px;
-            height: 844px;
-            position: relative;
-            margin: 0 auto;
-            overflow: hidden;
+        width: 390px;
+        height: 844px;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
         }
 
-        #indexmessage {
-            position: absolute;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
+         #indexmessage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;   
         }
+    
+        #startbutton { 
+         position:absolute; 
+         top: 630px;
+         left: 51%;
+         width: 353px;
+         z-index: 1;  
+         color:black;
+        }
+       
 
-        #startbutton {
-            position: absolute;
-            top: 630px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 353px;
-            z-index: 1;
-            color: black;
-        }
-
-        #text {
-            position: absolute;
-            top: 320px;
-            left: 20px;
-            width: 350px;
-            font-family: "Inter", sans-serif;
-            font-size: 20px;
-            color: black;
-            text-align: left;
-            white-space: pre-wrap;
-            z-index: 1;
-        }
+}
+        
     </style>
 </head>
 <body>
-    <div class="container">
-        <p id="instructions">Don't overthink it. This only works if you choose.</p>
-        <img src="assets/indexmessage.png" id="indexmessage" />
-        <p id="text"></p>
-        <p id="startbutton"><a href="page-2.html">Press Start</a></p>
-        <audio id="iphonetext" src="assets/iphonetext.mp3" autoplay loop></audio>
-    </div>
-
+    <p id="instructions"> Don't overthink it. This only works if you choose. </p>
+    <p id="startbutton"> <a href= "page-2.html"> Press Start </a>
+    </p>
+    <img src="assets/indexmessage.png" id="indexmessage" />
+    <p id="text"></p>
+    <img src="assets/indexmessage.png" id="indexmessage" />
+      <audio id="iphonetext" src="assets/iphonetext.mp3" autoplay loop></audio>
     <script>
-        const text = "To the ones who say it's fine,\nand then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it.\n\nLet's begin.";
-        const el = document.getElementById('text');
+     const text = "To the ones who say it's fine,\nand then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it.\n\nLet's begin.";
+    const el = document.getElementById('text');
         let i = 0;
-
+         const sound = document.getElementById('iphonetext');
         setInterval(() => {
-            if (i < text.length) {
-                el.textContent += text[i];
-                i++;
-            }
-        }, 100);
+    if (i < text.length) {
+        el.textContent += text[i];
+        i++;
+    } else {
+        sound.loop();
+    }
+    }, 100);
     </script>
 </body>
 </html>
+      
