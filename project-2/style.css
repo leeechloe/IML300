@@ -1,30 +1,33 @@
-#indexmessage {
+#indexmessage {     
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #text {
     position: absolute;
     top: 460px;
-    left: 41%;
-    width: 380px;
+    left: 20px;      
+    width: 350px;
     font-family: "Inter", sans-serif;
-    font-size: 50x;
+    font-size: 26px;
     text-align: left;
     white-space: pre-wrap;
     color: black;
     z-index: 1;
 }
- #instructions {
-      position:absolute;
-      top: 48.8%; 
-     left: 40.4%; 
-     width: 420px;
-     font-family:"Inter", sans-serif;
-     font-size: 16x;
-      z-index: 1; 
-        }
+
+#instructions {
+    position: absolute;
+    top: 48.8%;
+    left: 40.4%;
+    width: 420px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;  
+    z-index: 1;
+}
+
 
 #startbutton:hover{ 
 cursor: pointer; 
