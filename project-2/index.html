@@ -37,27 +37,39 @@
         width: 350px;   
         }
     
-        #startbutton { 
-         position:absolute; 
-         top: 630px;
-         left: 51%;
-         width: 353px;
-         z-index: 1;  
-         color:black;
+        #pressstart { 
+        position: absolute;
+         top: 761px;
+        left: 51.1%;
+         transform: translateX(-55%);
+        width: 300px;
+         font-family:"Inter", sans-serif;
+          font-weight: 500;
+         font-style: normal;
+          font-size: 15px;
+          color: black;    
         }
        
-
-}
+        #startbutton { 
+         position: absolute;
+         top: 760px;
+         left: 50.5%;
+         transform: translateX(-55%);
+         width: 130px;
+        }
         
     </style>
 </head>
 <body>
+    
+    <img src="assets/startbutton.png" id="startbutton" width="80"/>
+     <a href="page-2.html"><p id="pressstart">Press Start</p></a>
+    
     <p id="instructions"> Don't overthink it. This only works if you choose. </p>
-    <p id="startbutton"> <a href= "page-2.html"> Press Start </a>
-    </p>
     <img src="assets/indexmessage.png" id="indexmessage" />
-    <p id="text"></p>
-    <img src="assets/indexmessage.png" id="indexmessage" />
+    <p id="imessagetext"></p>
+
+    
      <audio id="iphonetext" src="assets/iphonetext.mp3" loop></audio>
     <script>
      const text = "To the ones who say it's fine,\nand then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it.\n\nLet's begin.";
