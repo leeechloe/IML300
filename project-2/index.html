@@ -58,19 +58,29 @@
     <img src="assets/indexmessage.png" id="indexmessage" />
     <p id="text"></p>
     <img src="assets/indexmessage.png" id="indexmessage" />
-      <audio id="iphonetext" src="assets/iphonetext.mp3" autoplay loop></audio>
+     <audio id="iphonetext" src="assets/iphonetext.mp3" loop></audio>
     <script>
      const text = "To the ones who say it's fine,\nand then thought about it for three days. To the ones who type, delete, retype, and still aren't sure. To the ones who almost said it.\n\nLet's begin.";
     const el = document.getElementById('text');
-        let i = 0;
-         const sound = document.getElementById('iphonetext');
-        setInterval(() => {
-    if (i < text.length) {
-        el.textContent += text[i];
-        i++;
-    } else {
-        sound.loop();
-    }
+    const sound = document.getElementById('iphonetext');
+    let i = 0;
+    let started = false;
+
+    document.addEventListener('click', () => {
+        if (!started) {
+            sound.play();
+            started = true;
+        }
+    });
+
+    setInterval(() => {
+        if (i < text.length) {
+            el.textContent += text[i];
+            i++;
+        } else {
+            sound.pause();  
+            sound.currentTime = 0;  
+        }
     }, 100);
     </script>
 </body>

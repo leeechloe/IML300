@@ -1,6 +1,5 @@
 
 /*index */
-
 #indexmessage {     
     position: absolute;
     top: 50%;
@@ -37,8 +36,9 @@ cursor: pointer;
 color: hotpink;
 transition: color 0.3s 
 }
-
 /*index*/ 
+
+
 
 body {
     min-height: 100vh;
