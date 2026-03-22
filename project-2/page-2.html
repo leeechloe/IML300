@@ -5,27 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page-2</title>
 	<link rel="stylesheet" href="style.css">
+ 
+ 
     <style>
         hmtl {
         height: 100%; 
         margin:0; 
         }
         body{ 
-             min-height: 100vh;
-            margin: 0;
-            background-color: #EEDAE6
+          min-height: 100vh;
+          margin: 0;
+          background-color: #EEDAE6
         }
         #matcha {
             position: absolute;
-             top: 100px;
-             left: 25%;
+             top: 250px;
+             left: 26%;
             transform: translateX(-55%);
-            width: 353px;
+            width: 270px;
         }
         #matchatext {
             position: absolute;
-             top: 410px;
-             left: 25%;
+             top: 550px;
+             left: 26%;
             transform: translateX(-55%);
             width: 300px;
             font-family:"Inter", sans-serif;
@@ -35,16 +37,16 @@
             color: darkgreen;   
         }
         #chocolate { 
-        position: absolute;
-             top: 100px;
-             left: 43%;
-            transform: translateX(-55%);
-            width: 353px;
-        }
-        #chocotext {
          position: absolute;
-             top: 410px;
-             left: 42%;
+         top: 250px;
+         left: 46%;
+         transform: translateX(-55%);
+         width: 270px;
+        }
+        #chocolatetext {
+         position: absolute;
+             top: 550px;
+             left: 46%;
             transform: translateX(-55%);
             width: 300px;
             font-family:"Inter", sans-serif;
@@ -55,15 +57,15 @@
         }
         #strawberry {
            position: absolute;
-             top: 100px;
-             left: 60%;
+             top: 250px;
+             left: 66%;
             transform: translateX(-55%);
-            width: 353px;  
+            width: 270px;  
         }
         #strawberrytext {
          position: absolute;
-             top: 410px;
-             left: 60%;
+             top: 550px;
+             left: 66%;
             transform: translateX(-55%);
             width: 300px;
             font-family:"Inter", sans-serif;
@@ -75,7 +77,7 @@
         #idk {
          position: absolute;
              top: 410px;
-             left: 80%;
+             left: 86%;
             transform: translateX(-55%);
             width: 300px;
             font-family:"Inter", sans-serif;
@@ -83,30 +85,25 @@
             font-style: normal;
             font-size: 15px;
             color: black;    
-        }
-    </style>
+        }   
+</style>
 </head>
 <body>
     <h1>Let's start with something easy!</h1>
-    <p> Choose an option.</p>
-  <div>
-    <p>You're standing front of an ice cream counter. The person behind you is waiting. What do you choose?</p>
-</div>
-
+  <p style="font-family: 'Inter', sans-serif;">Choose an option.</p>
 <div>
- <a href="page-3.html">
-    <img src="assets/matcha.png" id="matcha" width="300"/>
-</a>
-   <p id="matchatext">matcha_icecream</p>
-    
-     <a href="page-3.html">
-     <img src="assets/chocolate.png" id="chocolate" width="300"/>
-    </a>
-    <p id="chocotext">chocolate_icecream</p>
-    
-   <a href="page-3.html">
-    <img src="assets/strawberry.png" id="strawberry" width="300"/>
-   </a>
-    <p id="strawberrytext">strawberry_icecream</p>
+    <p style="font-family: 'Inter', sans-serif;">You're standing in front of an ice cream counter. The person behind you is waiting. What do you choose?</p>
+</div>
+  <img src="assets/matchaicecream.png" id="matcha"/>
+  <a href="page-3.html"><p id="matchatext"> matcha_icecream</p></a>
 
-    <a href="page-4.html"><p id="idk">I can't decide.</p></a>
+   <img src="assets/chocolateicecream.png" id="chocolate" />
+  <a href="page-3.html"><p id="chocolatetext"> chocolate_icecream</p></a>
+
+   <img src="assets/strawberryicecream.png" id="strawberry" />
+  <a href="page-3.html"><p id="strawberrytext">strawberry_icecream</p></a>
+
+  
+   <a href="page-4.html"><p id="idk">I can't decide.</p></a>
+</body>
+</html>

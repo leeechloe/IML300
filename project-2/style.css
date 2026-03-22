@@ -34,26 +34,36 @@
 color: whitesmoke;
 transition: color 0.3s
 }
-
 /*index*/ 
 
 
-
+/*page 2*/ 
 body {
     min-height: 100vh;
     margin: 0;
     background-color: #EEDAE6;
     text-align: center;
 }
-#matcha {
-    position: absolute;
-    top: 200px;
-    left: 20%;
-    transform: translateX(-50%);
+   
+#matchatext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
 }
-#matcha {
-    display: block;
-    margin: 0 auto;
+#chocolatetext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+#strawberrytext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+
+#idk:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
 }
 
 #idk {
@@ -61,15 +71,14 @@ body {
     color: black;
     transition: color 0.3s;
 }
+/*page 2*/ 
 
-#idk:hover {
-    color: whitesmoke;
-}
+
+
 
 ilikeyou:hover {
 color: whitesmoke
 }
-
 
 h1 {
     font-family: "Inter", sans-serif;

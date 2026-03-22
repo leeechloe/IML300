@@ -13,13 +13,18 @@
         }
         
         body{ 
-         min-height: 100vh;
+        min-height: 100vh;
          margin: 0;
-        background-image:url("assets/grass.gif");
+        background-image:url(assets/overthinkwallpaper.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        } 
+        }
+        #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+     }
         
         .container {
         width: 390px;
@@ -61,6 +66,34 @@
     </style>
 </head>
 <body>
+   
+    <div id="overlay"></div>
+    <script>
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    document.getElementById("overlay").appendChild(canvas);
+
+    // Make canvas full screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Cover everything with black
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Pixel size
+    const size = 20;
+
+    // Mouse movement = erase squares
+    window.addEventListener("mousemove", (e) => {
+      const x = Math.floor(e.clientX / size) * size;
+      const y = Math.floor(e.clientY / size) * size;
+
+      ctx.clearRect(x, y, size, size);
+    });
+    </script>
+    
     
     <img src="assets/startbutton.png" id="startbutton" width="80"/>
      <a href="page-2.html"><p id="pressstart">Press Start</p></a>
