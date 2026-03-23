@@ -71,28 +71,58 @@ body {
     color: black;
     transition: color 0.3s;
 }
+h1 {
+    font-family: "Inter", sans-serif;
+}
 /*page 2*/ 
 
+/*page 3*/
+
+/*page 3*/
 
 
+
+
+/* page 4 */ 
+#next:hover{ 
+cursor:pointer;
+color:white;
+transition: color 0.3s
+}
+#back:hover { 
+cursor:pointer;
+color:whitesmoke;
+transition: color 0.3s
+}
+#back:hover { 
+cursor:pointer;
+color:whitesmoke;
+transition: color 0.3s
+}
+/* page 4 */ 
+
+/* page 5*/ 
+#wallpaper {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);  
+    height: calc(100% + 40px);
+    z-index: 0;
+}
+/* page 5*/ 
 
 ilikeyou:hover {
 color: whitesmoke
 }
 
-h1 {
-    font-family: "Inter", sans-serif;
-}
+
 #next:hover{ 
 cursor:pointer;
-color:hotpink;
+color:white;
 transition: color 0.3s
 }
-#back:hover { 
-cursor:pointer;
-color:hotpink;
-transition: color 0.3s
-}
+
 #before:hover{ 
 cursor: pointer; 
 color:black;
@@ -246,3 +276,19 @@ transition: color 0.3s
     font-size: 15px;
     color: black; 
 }
+
+/* page 8*/ 
+#next:hover{ 
+cursor:pointer;
+color: blue;
+transition: color 0.3s
+}
+
+#back:hover{ 
+cursor:pointer;
+color: blue;
+transition: color 0.3s
+}
+/* page 8*/ 
+
+

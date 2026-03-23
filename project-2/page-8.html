@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-8</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        #beforefolder {
+            position: absolute;
+            top: 10%;
+            left: 53%;
+            transform: translateX(-55%);
+            width: 70%;
+        }
+
+        #drafttxt {
+            position: absolute;
+            top: 195px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #expandimg3964 {
+            position: absolute;
+            top: 200px;
+            left: 40%;
+            transform: translateX(-50%);
+            width: 100px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #notes {
+            position: absolute;
+            top: 200px;
+            left: 61%;
+            transform: translateX(-50%);
+            width: 132px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #overlaydraft, #overlay, #overlaynotes {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 99;
+            cursor: pointer;
+        }
+
+        #bigdraft, #bigimg3964, #bignotes {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+        }
+        #next { 
+         position: absolute;
+             top: 800px;
+             left: 80%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        #back { 
+         position: absolute;
+             top: 800px;
+             left: 20%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+    </style>
+</head>
+<body>
+
+    <a href="page-12.html"><p id="next">next</p></a>
+    <a href="page-5.html"><p id="back">back</p></a>
+    
+    <img src="assets/Before%20Folder.png" id="beforefolder"/>
+
+    <!-- draft -->
+    <img src="assets/draft.txt.png" id="drafttxt"/>
+    <div id="overlaydraft">
+        <img src="assets/draft.txt.png" id="bigdraft"/>
+    </div>
+
+    <script>
+        const draft = document.getElementById('drafttxt');
+        const overlaydraft = document.getElementById('overlaydraft');
+        draft.addEventListener('click', () => {
+            overlaydraft.style.display = 'block';
+        });
+        overlaydraft.addEventListener('click', () => {
+            overlaydraft.style.display = 'none';
+        });
+    </script>
+
+    <!-- IMG 3964 -->
+    <img src="assets/IMG_3964.png" id="expandimg3964"/>
+    <div id="overlay">
+        <img src="assets/IMG_3964.png" id="bigimg3964"/>
+    </div>
+
+    <script>
+        const expandimg = document.getElementById('expandimg3964');
+        const overlay = document.getElementById('overlay');
+        expandimg.addEventListener('click', () => {
+            overlay.style.display = 'block';
+        });
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    </script>
+    
+     <!-- notes -->
+    <img src="assets/notes.png" id="notes"/> 
+    <div id="overlaynotes">
+    <img src="assets/notes.png" id="bignotes"/>
+    </div>
+    
+    <script> 
+        const notes = document.getElementById('notes');
+        const overlaynotes = document.getElementById('overlaynotes');
+        notes.addEventListener('click', () => {
+            overlaynotes.style.display = 'block';
+        });
+        overlaynotes.addEventListener('click', () => {
+            overlaynotes.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
