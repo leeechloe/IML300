@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-13</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background-image: url(assets/ocean.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #peacetext {
+            position: absolute;
+            top: 250px;
+            left: 51.2%;
+            transform: translateX(-55%);
+            width: 760px;
+            font-family: "Inter", sans-serif;
+            font-size: 40px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <p id="peacetext">Maybe it doesn't need to be solved.
+    <br/> Maybe it just needed somewhere to go.</p>
+
+   <audio id="oceansound" loop>
+    <source src="assets/oceanwavesound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const sound = document.getElementById('oceansound');
+
+    document.body.addEventListener('click', () => {
+        if (sound.paused) {
+            sound.volume = 1;
+            sound.play().catch(err => console.log(err));
+        }
+    });
+</script>
+
+</body>
+</html>
