@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-9</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        #afterfolder {
+            position: absolute;
+            top: 10%;
+            left: 53%;
+            transform: translateX(-55%);
+            width: 70%;
+        }
+        #next { 
+         position: absolute;
+             top: 800px;
+             left: 80%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        #back { 
+         position: absolute;
+             top: 800px;
+             left: 20%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        
+        #img7841text {
+            position: absolute;
+            top: 38.3%;
+            left: 40.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
+        
+        #img7841 {
+            position: absolute;
+            top: 200px;
+            left: 40%;
+            transform: translateX(-50%);
+            width: 100px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        #img9839text {
+            position: absolute;
+            top: 38.3%;
+            left: 50.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
+        
+        #img9839 {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        #wishsdtext {
+            position: absolute;
+            top: 38.3%;
+            left: 60.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 9.4px;
+            color: black;   
+        }
+        
+        #wishsd {
+            position: absolute;
+            top: 195px;
+            left: 61%;
+            transform: translateX(-50%);
+            width: 150px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        
+        #overlayimg7841, #overlayimg9839, #overlaywishsd {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 99;
+            cursor: pointer;
+        }
+        
+        #bigimg7841, #bigimg9839, #bigwishsd{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+        }
+
+ </style>
+</head>
+<body>
+<a href="page-12.html"><p id="next">next</p></a>
+<a href="page-5.html"><p id="back">back</p></a>
+    
+<img src="assets/After%20Folder.png" id="afterfolder"/>
+
+    
+<!--img 7841-->
+<p id="img7841text">IMG_7841</p>
+<img src="assets/IMG_7841.png" id="img7841"/>
+<div id="overlayimg7841">
+<img src="assets/IMG_7841.png" id="bigimg7841"/>
+</div>
+
+<script>
+const IMG_7841 = document.getElementById('img7841');
+const overlayimg7841 = document.getElementById('overlayimg7841');
+
+IMG_7841.addEventListener('click', () => {
+    overlayimg7841.style.display = 'block';
+});
+overlayimg7841.addEventListener('click', () => {
+    overlayimg7841.style.display = 'none';
+});
+</script>
+
+<!--img 9839-->
+<p id="img9839text">IMG_9839</p>
+<img src="assets/IMG_9839.png" id="img9839"/>
+<div id="overlayimg9839">
+    <img src="assets/IMG_9839.png" id="bigimg9839"/>
+</div>
+
+<script>
+const IMG_9839 = document.getElementById('img9839');
+const overlayimg9839 = document.getElementById('overlayimg9839');
+
+IMG_9839.addEventListener('click', () => {
+    overlayimg9839.style.display = 'block';
+});
+overlayimg9839.addEventListener('click', () => {
+    overlayimg9839.style.display = 'none';
+});
+</script>
+    
+<!--whatishouldhavesaiddoc-->
+<p id="wishsdtext">what_i_should_have_said.doc</p>
+<img src="assets/what_i_should_have_said.doc.png" id="wishsd"/>
+<div id="overlaywishsd">
+<img src="assets/what_i_should_have_said.doc.png" id="bigwishsd"/>
+</div>
+
+<script>
+const what_i_should_have_said = document.getElementById('wishsd');
+const overlaywishsd = document.getElementById('overlaywishsd');
+
+what_i_should_have_said.addEventListener('click', () => {
+    overlaywishsd.style.display = 'block';
+});
+overlaywishsd.addEventListener('click', () => {
+    overlaywishsd.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

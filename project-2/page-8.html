@@ -19,7 +19,18 @@
             transform: translateX(-55%);
             width: 70%;
         }
-
+        #drafttext {
+            position: absolute;
+             top: 38%;
+             left: 40.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
         #drafttxt {
             position: absolute;
             top: 195px;
@@ -28,6 +39,18 @@
             width: 150px;
             cursor: pointer;
             z-index: 1;
+        }
+        #img3964text {
+         position: absolute;
+             top: 39%;
+             left: 50.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
         }
 
         #expandimg3964 {
@@ -40,6 +63,18 @@
             z-index: 1;
         }
 
+        #notestext {
+         position: absolute;
+             top: 39%;
+             left: 61.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
         #notes {
             position: absolute;
             top: 200px;
@@ -104,6 +139,7 @@
     <img src="assets/Before%20Folder.png" id="beforefolder"/>
 
     <!-- draft -->
+    <p id="drafttext">draft.txt</p>
     <img src="assets/draft.txt.png" id="drafttxt"/>
     <div id="overlaydraft">
         <img src="assets/draft.txt.png" id="bigdraft"/>
@@ -121,6 +157,7 @@
     </script>
 
     <!-- IMG 3964 -->
+     <p id="img3964text">IMG_3964</p>
     <img src="assets/IMG_3964.png" id="expandimg3964"/>
     <div id="overlay">
         <img src="assets/IMG_3964.png" id="bigimg3964"/>
@@ -138,6 +175,7 @@
     </script>
     
      <!-- notes -->
+    <p id="notestext">notes.jpeg</p>
     <img src="assets/notes.png" id="notes"/> 
     <div id="overlaynotes">
     <img src="assets/notes.png" id="bignotes"/>

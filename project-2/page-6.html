@@ -1,112 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page-6</title>
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        hmtl {
-        height: 100%; 
-        margin:0; 
-        }
-        body{ 
-             min-height: 100vh;
+        body {
+            min-height: 100vh;
             margin: 0;
-        background-color: black;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        } 
-        
+            background-color: black;
+        }
+
         #UnsaidText {
-        position: absolute;
-             top: 10px;
-             left: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
             transform: translateX(-55%);
             width: 500px;
-            font-family:"Inter", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 800;
-            font-style: normal;
             font-size: 40px;
-            color: lightyellow;   
+            color: #007AFF;
         }
-        #unsaidsubtext{ 
+
+        #unsaidsubtext {
             position: absolute;
-             top: 100px;
-             left: 50%;
+            top: 100px;
+            left: 50%;
             transform: translateX(-55%);
             width: 400px;
-            font-family:"Inter", sans-serif;
-            color: white; 
+            font-family: "Inter", sans-serif;
+            color: white;
         }
-        
-        #refresh{ 
-         position: absolute;
-        top: 800px;
-        left: 50%;
-        transform: translateX(-55%);
-        width: 300px;
-        font-family:"Inter", sans-serif;
-        font-weight: 500;
-         font-style: normal;
-         font-size: 15px;
-         color: white;   
-        }
-        #nextpage7{ 
-         position: absolute;
-        top: 800px;
-        left: 95%;
-        transform: translateX(-55%);
-        width: 300px;
-        font-family:"Inter", sans-serif;
-        font-weight: 500;
-         font-style: normal;
-         font-size: 15px;
-         color: white;   
-       }
 
-        </style>
-    </head>
-    <body>
-        <h1 id="UnsaidText">The Unsaid Sentences.</h1>
-        <p id="unsaidsubtext"> The ones you rehearse. The ones you swallow. The ones you think about later in the shower. <br /> Click the sentence I didn't say. </p> 
-      <script>
-    const text = "The ones you rehearse. The ones you swallow. The ones you think about later in the shower. Click the sentence I didn't say.";
-    const el = document.getElementById('unsaidsubtext');
-    el.textContent = '';
-    let i = 0;
-    setInterval(() => {
-        if (i < text.length) {
-            el.textContent += text[i];
-            i++;
+        /* all sentence images same size and position */
+        .sentenceimg {
+            display: none;
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;      /* fixed size so it doesn't cover buttons */
+            max-width: 350px;
+            z-index: 2;
         }
-    }, 80); 
-</script>
-       <p id="ilikeyou" onclick="document.getElementById('ilikeyouimg').style.display='block'">I like you.</p>
-       <img src="assets/ilikeyoutext.png" id="ilikeyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-    
-        <p id="thathurt" onclick="document.getElementById('thathurtimg').style.display='block'"> That hurt.</p>
-        <img src="assets/thathurttext.png" id="thathurtimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        
-          <p id="imissyou" onclick="document.getElementById('imissyouimg').style.display='block'"> I miss you.</p>
-        <img src="assets/imissyoutext.png" id="imissyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        
-    
-        <p id="imnotokay" onclick="document.getElementById('imnotokayimg').style.display='block'"> I'm not okay. </p>
-        <img src="assets/imnotokaytext.png" id="imnotokayimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        
-      
-        <p id="stay" onclick="document.getElementById('stayimg').style.display='block'"> Stay. </p>
-        <img src="assets/staytext.png" id="stayimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        
-        
-        <p id="ineededyou" onclick="document.getElementById('ineededyouimg').style.display='block'"> I needed you. </p>
-        <img src="assets/ineededyoutext.png" id="ineededyouimg" style="display:none; position:absolute; top:200px; left:50%; transform:translateX(-50%); z-index:10;" />
-        
-        
-        <a href="" onclick="location.reload()"><p id="refresh">Choose another sentence.</p></a>
-         <a href="page-7.html"><p id="nextpage7"> next. </p></a>
 
-    </body>
+        #ilikeyou, #thathurt, #imissyou, #imnotokay, #stay, #ineededyou {
+            position: absolute;
+            font-family: "Inter", sans-serif;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #ilikeyou    { top: 400px; left: 50.5%; }
+        #thathurt    { top: 425px; left: 50.5%; }
+        #imissyou    { top: 450px; left: 50.5%; }
+        #imnotokay   { top: 475px; left: 50.5%; }
+        #stay        { top: 500px; left: 50.5%; }
+        #ineededyou  { top: 520px; left: 50.5%; }
+
+        #refresh {
+            position: absolute;
+            top: 800px;
+            left: 50%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: white;
+            z-index: 99;  
+            cursor: pointer;
+        }
+
+        #nextpage7 {
+            position: absolute;
+            top: 800px;
+            left: 50%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: white;
+            z-index: 99;  
+        }
+        
+        #next:hover{ 
+        cursor:pointer;
+        color:#007AFF;
+        transition: color 0.3s
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="UnsaidText">The Unsaid Sentences.</h1>
+    <p id="unsaidsubtext"></p>
+
+    <p id="ilikeyou"   onclick="showImg('ilikeyouimg')">I like you.</p>
+    <p id="thathurt"   onclick="showImg('thathurtimg')">That hurt.</p>
+    <p id="imissyou"   onclick="showImg('imissyouimg')">I miss you.</p>
+    <p id="imnotokay"  onclick="showImg('imnotokayimg')">I'm not okay.</p>
+    <p id="stay"       onclick="showImg('stayimg')">Stay.</p>
+    <p id="ineededyou" onclick="showImg('ineededyouimg')">I needed you.</p>
+
+    <img src="assets/ilikeyoutext.png"   id="ilikeyouimg"   class="sentenceimg"/>
+    <img src="assets/thathurttext.png"   id="thathurtimg"   class="sentenceimg"/>
+    <img src="assets/imissyoutext.png"   id="imissyouimg"   class="sentenceimg"/>
+    <img src="assets/imnotokaytext.png"  id="imnotokayimg"  class="sentenceimg"/>
+    <img src="assets/staytext.png"       id="stayimg"       class="sentenceimg"/>
+    <img src="assets/ineededyoutext.png" id="ineededyouimg" class="sentenceimg"/>
+
+    
+    <a href="page-12.html"><p id="nextpage7">next.</p></a>
+
+    <script>
+        // typewriter effect
+        const text = "The ones you rehearse. The ones you swallow. The ones you think about later in the shower. Click the sentence I didn't say.";
+        const el = document.getElementById('unsaidsubtext');
+        let i = 0;
+        setInterval(() => {
+            if (i < text.length) {
+                el.textContent += text[i];
+                i++;
+            }
+        }, 80);
+
+        // show image and hide all others first
+        function showImg(id) {
+            const imgs = document.querySelectorAll('.sentenceimg');
+            imgs.forEach(img => img.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
 </html>

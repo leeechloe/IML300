@@ -74,18 +74,18 @@
 
     document.getElementById("overlay").appendChild(canvas);
 
-    // Make canvas full screen
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Cover everything with black
+   
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Pixel size
+  
     const size = 20;
 
-    // Mouse movement = erase squares
+   
     window.addEventListener("mousemove", (e) => {
       const x = Math.floor(e.clientX / size) * size;
       const y = Math.floor(e.clientY / size) * size;
