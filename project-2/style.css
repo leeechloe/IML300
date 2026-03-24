@@ -112,41 +112,11 @@ transition: color 0.3s
 }
 /* page 5*/ 
 
-ilikeyou:hover {
-color: whitesmoke
-}
 
-
-#next:hover{ 
-cursor:pointer;
-color:white;
-transition: color 0.3s
-}
-
-#before:hover{ 
-cursor: pointer; 
-color:black;
-transition: color 0.3s
-}
-#after:hover{ 
-cursor: pointer; 
-color:black;
-transition: color 0.3s
-}
-#both:hover{ 
-cursor: pointer; 
-color:black;
-transition: color 0.3s
-}
-#no:hover{ 
-cursor: pointer; 
-color:black;
-transition: color 0.3s
-}
-
+/* page 6*/ 
 #ilikeyou:hover{ 
 cursor: pointer; 
-color:lightpink;
+color:whitesmoke;
 transition: color 0.3s
 }
 #thathurt:hover{ 
@@ -180,6 +150,114 @@ color:lightpink;
 transition: color 0.3s
 }
 
+#ilikeyou{ 
+     position: absolute;
+     top: 300px;
+      left: 50%;
+     transform: translateX(-55%);
+     width: 300px;
+     font-family:"Inter", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+      font-size: 15px;
+     color: white; 
+}
+#thathurt{ 
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#imissyou{ 
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#imnotokay {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#stay{ 
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#ineededyou{ 
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#refresh{ 
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+/* page 6*/ 
+
+/* page 7*/ 
+#next:hover{ 
+cursor:pointer;
+color:white;
+transition: color 0.3s
+}
+
+#before:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#after:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#both:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#no:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+/* page 7*/ 
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -197,84 +275,6 @@ transition: color 0.3s
     font-size: 15px;
     color: whitesmoke;
     animation: fadeIn 5s ease-in;
-}
-#ilikeyou{ 
-     position: absolute;
-     top: 300px;
-      left: 50%;
-     transform: translateX(-55%);
-     width: 300px;
-     font-family:"Inter", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-      font-size: 15px;
-     color: black; 
-}
-#thathurt{ 
-    position: absolute;
-    top: 330px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
-}
-#imissyou{ 
-    position: absolute;
-    top: 360px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
-}
-#imnotokay {
-    position: absolute;
-    top: 390px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
-}
-#stay{ 
-    position: absolute;
-    top: 420px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
-}
-#ineededyou{ 
-    position: absolute;
-    top: 450px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
-}
-#refresh{ 
-    position: absolute;
-    top: 700px;
-    left: 50%;
-    transform: translateX(-55%);
-    width: 300px;
-    font-family:"Inter", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: black; 
 }
 
 /* page 8*/ 
