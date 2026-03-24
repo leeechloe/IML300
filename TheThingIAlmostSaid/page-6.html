@@ -6,6 +6,7 @@
     <title>The Thing I Almost Said</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* AI USE: I asked AI to fix minor bugs when I followed the typerwriter tutorial: https://css-tricks.com/snippets/css/typewriter-effect/ */ 
         body {
             min-height: 100vh;
             margin: 0;
@@ -34,14 +35,14 @@
             color: white;
         }
 
-        /* all sentence images same size and position */
+       
         .sentenceimg {
             display: none;
             position: absolute;
             top: 180px;
             left: 50%;
             transform: translateX(-50%);
-            width: 350px;      /* fixed size so it doesn't cover buttons */
+            width: 350px;      /
             max-width: 350px;
             z-index: 2;
         }
@@ -118,7 +119,7 @@
     <a href="page-12.html"><p id="nextpage7">next.</p></a>
 
     <script>
-        // typewriter effect
+     
         const text = "The ones you rehearse. The ones you swallow. The ones you think about later in the shower. Click the sentence I didn't say.";
         const el = document.getElementById('unsaidsubtext');
         let i = 0;
@@ -129,7 +130,7 @@
             }
         }, 80);
 
-        // show image and hide all others first
+        
         function showImg(id) {
             const imgs = document.querySelectorAll('.sentenceimg');
             imgs.forEach(img => img.style.display = 'none');
