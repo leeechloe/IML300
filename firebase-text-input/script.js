@@ -65,3 +65,110 @@ function submitlock() {
   share.disabled = true;
   share.style.width = "70%";
 }
+// ── Sparkle animation ──────────────────────────────────────────────────────
+(function () {
+  const canvas = document.getElementById("sparkle-canvas");
+  const ctx = canvas.getContext("2d");
+ 
+  const COLORS = [
+    [255, 230, 160],
+    [255, 200, 210],
+    [230, 170, 255],
+    [255, 255, 220],
+    [255, 180, 130],
+    [255, 255, 255],
+  ];
+ 
+  let W, H;
+ 
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resize);
+  resize();
+ 
+  function rand(a, b) { return Math.random() * (b - a) + a; }
+ 
+  function makeSpark() {
+    return {
+      x: rand(0, W),
+      y: rand(0, H),
+      size: rand(1.5, 4),
+      col: COLORS[Math.floor(Math.random() * COLORS.length)],
+      life: Math.floor(rand(0, 200)),
+      lifespan: rand(140, 260),
+      vx: rand(-0.08, 0.08),
+      vy: rand(-0.15, -0.03),
+      phase: rand(0, Math.PI * 2),
+      tSpeed: rand(0.04, 0.09),
+      isStar: Math.random() < 0.45,
+    };
+  }
+ 
+  const sparks = Array.from({ length: 100 }, makeSpark);
+ 
+  function drawStar(x, y, r, alpha, col) {
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = `rgba(${col[0]},${col[1]},${col[2]},1)`;
+    ctx.shadowColor = `rgba(${col[0]},${col[1]},${col[2]},0.9)`;
+    ctx.shadowBlur = r * 5;
+    ctx.translate(x, y);
+    ctx.beginPath();
+    for (let i = 0; i < 8; i++) {
+      const a = (i * Math.PI) / 4;
+      const rr = i % 2 === 0 ? r : r * 0.28;
+      i === 0
+        ? ctx.moveTo(Math.cos(a) * rr, Math.sin(a) * rr)
+        : ctx.lineTo(Math.cos(a) * rr, Math.sin(a) * rr);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+ 
+  function drawDot(x, y, r, alpha, col) {
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = `rgba(${col[0]},${col[1]},${col[2]},1)`;
+    ctx.shadowColor = `rgba(${col[0]},${col[1]},${col[2]},0.85)`;
+    ctx.shadowBlur = r * 5;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+ 
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    for (const s of sparks) {
+      s.life++;
+      s.x += s.vx;
+      s.y += s.vy;
+      s.phase += s.tSpeed;
+ 
+      const t = s.life / s.lifespan;
+      let env;
+      if (t < 0.2)      env = t / 0.2;
+      else if (t > 0.7) env = (1 - t) / 0.3;
+      else              env = 1;
+ 
+      // pow(sin,2) creates sharp bright pulses — much more visible than plain sin
+      const twinkle = 0.4 + 0.6 * Math.pow(Math.sin(s.phase), 2);
+      const alpha = Math.max(0, Math.min(1, env * twinkle * 0.92));
+ 
+      if (s.life >= s.lifespan) {
+        Object.assign(s, makeSpark());
+        s.life = 0;
+      } else {
+        s.isStar
+          ? drawStar(s.x, s.y, s.size, alpha, s.col)
+          : drawDot(s.x, s.y, s.size, alpha, s.col);
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+ 
