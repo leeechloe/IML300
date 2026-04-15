@@ -24,10 +24,6 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 let dbRef = db.ref("text");
 
-  var data ={
-    name: "q",
-    word: "hello"
-  }
 
  dbRef.push(data);
 
