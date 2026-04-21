@@ -11,7 +11,8 @@
         body{ 
              min-height: 100vh;
             margin: 0;
-            background-image: url(assets/paulsmith.jpeg);
+           /* background-image: url(assets/pinkwall.jpeg); */
+            background-color:pink;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -74,6 +75,7 @@
      font-size: 40px;
     color: aliceblue; 
      }
+    
      #journal{
         position: absolute;
         top: 25%;
@@ -192,6 +194,15 @@
     <p id="jonvinnytitle"> Jon and Vinnys</p>
     <p id="jonvinnytext">My friend and I are the kind of people who will plan an entire day around pasta. We came here before a Beabadoobee concert, which meant we were already in the best possible mood, and then the vodka pasta arrived and made everything better. There's something about eating something that good before live music that makes both feel more alive. That whole day lives in my memory as one of those perfect LA days where everything just lines up.</p>
    
-        
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script>
+    $(function () {
+    $("#communitygoods").draggable();
+    $("#jonvinny").draggable();
+    $("#pizzabox").draggable();
+});
+</script>  
 </body>
 </html>
