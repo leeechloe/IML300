@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+    </head>
+    <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Los Angeles</title>
+
+    <style>
+        body {
+            background-color:  #930500;
+            color: white;
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 320px;
+            text-align: center;
+        }
+
+        #prompt {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 18px;
+            border: none;
+            background-color: #1a1a1a;
+            color: white;
+            outline: none;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #555;
+        }
+
+        #fileUpload {
+            margin-bottom: 12px;
+            color: #aaa;
+        }
+
+        #preview {
+            margin-top: 10px;
+            max-width: 100%;
+            border-radius: 12px;
+            display: none;
+        }
+
+        #sendbtn {
+            margin-top: 12px;
+            padding: 10px 24px;
+            border-radius: 20px;
+            border: none;
+            background-color: #007aff;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #response {
+            display: none;
+            font-size: 15px;
+            line-height: 2;
+            opacity: 0;
+            transition: opacity 1.5s;
+        }
+
+        #next {
+            display: none;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        #next:hover {
+            color: white;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <p id="prompt">
+            dear los angeles,<br><br>
+            where did you feel something?<br>
+            a place, a meal, a moment you still carry.
+        </p>
+
+        <input id="place" placeholder="where was it?">
+        <textarea id="memory" placeholder="what happened there?"></textarea>
+
+        <!-- 📎 File Upload -->
+        <input type="file" id="fileUpload" accept="image/*,audio/*,video/*">
+        <img id="preview">
+
+        <br>
+        <button id="sendbtn" onclick="sendMemory()">leave it here</button>
+
+        <div id="response">
+            <p>
+                it stays here now.<br>
+                somewhere between the city and you.<br>
+                los angeles remembers too.
+            </p>
+        </div>
+
+        <a href="page-2.html" id="next">next</a>
+
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("fileUpload");
+        const preview = document.getElementById("preview");
+
+        // Show preview if image
+        fileInput.addEventListener("change", function() {
+            const file = this.files[0];
+
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.display = "none";
+            }
+        });
+
+        function sendMemory() {
+            const file = fileInput.files[0];
+
+            if (file) {
+                console.log("Uploaded file:", file.name);
+                // ⚠️ Note: This does NOT save the file anywhere yet
+            }
+
+            document.getElementById("place").style.display = "none";
+            document.getElementById("memory").style.display = "none";
+            document.getElementById("sendbtn").style.display = "none";
+            document.getElementById("prompt").style.display = "none";
+            fileInput.style.display = "none";
+            preview.style.display = "none";
+
+            const response = document.getElementById("response");
+            response.style.display = "block";
+
+            setTimeout(() => {
+                response.style.opacity = 1;
+            }, 100);
+
+            setTimeout(() => {
+                document.getElementById("next").style.display = "block";
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
+    </body>
+</html>
