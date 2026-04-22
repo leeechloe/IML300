@@ -7,7 +7,9 @@
      #title:hover {
           color: #683629;
         }
-
+#archives:hover {
+          color: #683629;
+        }
 #checkout:hover {
     color: #683629;
     transition: color 0.3s;
