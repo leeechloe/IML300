@@ -72,8 +72,9 @@
      #title:hover {
           color: #683629;
         }
+        
     
-    #santamonicatitle{
+    #pasadenatitle{
     position: absolute;
      top: 15%;
      left: 50.5%;
@@ -96,6 +97,107 @@
     z-index: 1;
     }
     
+    
+        
+    #wakeandlatetitle{
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    transform: translateX(-55%);
+    width: 300px;  
+    z-index: 3; 
+    font-family: "Apple Garamond";
+    font-weight: 550;
+    font-style: normal;
+     font-size: 20px;
+    }
+      
+    #miopanetitle{ 
+    position: absolute;
+    top: 53%;
+    left: 42%;
+    transform: translateX(-55%);
+    width: 300px;  
+    z-index: 3; 
+    font-family: "Apple Garamond";
+    font-weight: 550;
+    font-style: normal;
+    font-size: 20px;
+    }
+    
+    #wakeandlatetext{ 
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    transform: translateX(-55%);
+    width: 250px;  
+    z-index: 3; 
+    font-family: "Apple Garamond";
+    font-weight: 200;
+     font-style: normal;
+     font-size: 12px;  
+     }
+        
+    #miopanetext{ 
+    position: absolute;
+    top: 57%;
+    left: 39%;
+    transform: translateX(-55%);
+    width: 230px;  
+    z-index: 3; 
+    font-family: "Apple Garamond";
+    font-weight: 200;
+     font-style: normal;
+     font-size: 12px;  
+     }
+        
+    #checkout{
+    position: absolute;
+    top: 86%;
+    left: 20%;
+    transform: translateX(-55%);
+    width: 300px;  
+    z-index: 3; 
+    font-family: "Birds of Paradise  Personal use";
+    font-weight: 80px;
+     font-style: normal;
+     font-size: 13px;   
+    color:aliceblue;
+    }
+    #checkout:hover {
+    color: #683629;
+    transition: color 0.3s;
+     cursor: pointer;
+     }
+      
+    #wakeandlatefriend{
+        position: absolute;
+        top: 27%;
+        left: 62%;
+        transform: translateX(-55%);
+        width: 190px;  
+        z-index: 2;
+        }
+        
+     #angiefriend{
+    position: absolute;
+     top: 54%;
+     left: 57%;
+     transform: translateX(-55%) rotate(340deg);
+     width: 180px;  
+    z-index: 3;
+     }
+    
+    #miopanebagel{
+     position: absolute;
+     top: 48%;
+     left: 63%;
+     transform: translateX(-55%) rotate(15deg);
+     width: 140px;  
+    z-index: 5;
+     }
+        
+        
   </style>
     </head>
     <body>
@@ -103,9 +205,28 @@
      <a href="page-1.html"><p id="about"> about</p></a>
      <a href="page-2.html"><p id="neighborhoods"> neigborhoods</p></a>
      <a href="page-9.html"><p id="archives"> archives</p></a>
-    <p id="santamonicatitle"> Santa Monica </p>
-     <img src="assets/journal.png" id="journal"/>
+    <p id="pasadenatitle"> Pasadena </p>
+    <a href="page-2.html"><p id="checkout"> check out other neighborhoods</p></a>
+    <img src="assets/journal.png" id="journal"/>
+    <img src="assets/wakeandlatefriend.png" id="wakeandlatefriend"/>
+    <img src="assets/miopanebagel.png" id="miopanebagel"/>
+    <img src="assets/angiedrive.png" id="angiefriend"/>
+    
+    
+    <p id="wakeandlatetitle"> Wake and Late </p>
+    <p id="wakeandlatetext"> If you're in LA and you haven't had a breakfast burrito yet, Wake and Late is where you should start. The classic comes with tater tots inside which is exactly the right call, and I always add steak. But the real secret is the sauces. Get the cilantro and the chipotle aioli. Both. It makes a difference that is hard to explain until you try it.
+        My friends and I would wake up early just to come here, which says a lot about how good it is. There's no better way to start a morning in Pasadena. </p>
+    <p id="miopanetitle"> Miopane </p>
+    <p id="miopanetext"> Pasadena is my hometown so when a new Taiwanese inspired bagel shop opened up, trying it was never a question. It was the perfect time to try with my friend. It was a very memorable day because my friend drove me! My friend and I went over spring break, waited in line, and it moved quickly enough that we weren't complaining. 
+        What sets Miopane apart is the texture. The bagels are fluffier and softer than your typical American bagel, which sounds simple but completely changes the experience. I got the scallion bagel and loved every bite. The coffee and matcha are solid too, making it an easy full order. A really exciting addition to Pasadena.</p>
 
-        
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script>
+    $(function () {
+    $("#wakeandlatefriend, #miopanebagel, #angiefriend").draggable();
+    });
+</script>
 </body>
 </html>

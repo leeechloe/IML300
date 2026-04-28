@@ -10,6 +10,11 @@ $(document).ready(function () {
     });   
 });
 
+console.log($("#matchaanko").length);
+console.log($("#ankostudy").length);
+console.log($("#bcdtofu").length);
+
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDY_YPuqgZuOCtzT3KpEsgRL_NHzhCMXwE",
@@ -21,3 +26,7 @@ const firebaseConfig = {
   measurementId: "G-K107WQJL70"
 };
 
+
+$(document).ready(function () {
+  $("#communitygoods, #matchaanko, #ankostudy, #bcdtofu").draggable();
+});

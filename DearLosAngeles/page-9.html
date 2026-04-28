@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dear Los Angeles</title>
+  <title>Archives</title>
 
   <style>
     body {
       background-color: #930500;
       color: white;
       font-family: sans-serif;
-      padding-top: 140px; /* ✅ FIX: pushes content below nav */
+      padding-top: 140px; 
       padding-left: 40px;
       padding-right: 40px;
     }
 
-    /* 🌴 YOUR NAV (UNCHANGED) */
+   
     #title{
       position: absolute;
       top: 0px;
@@ -68,7 +68,7 @@
       color: #683629;
     }
 
-    /* 🌴 INPUTS */
+
     input {
       display: block;
       margin-bottom: 10px;
@@ -88,7 +88,7 @@
       cursor: pointer;
     }
 
-    /* 🌴 ARCHIVE */
+  
     #chat-container {
       margin-top: 40px;
     }
@@ -119,28 +119,28 @@
     }
   </style>
 
-  <!-- Firebase v8 -->
+ 
   <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
 </head>
 
 <body>
 
-  <!-- 🌴 NAV -->
+
 <a href="index.html" id="title" style="text-decoration: none;">Dear Los Angeles</a>
 <a href="page-1.html" id="about" style="text-decoration: none;">about</a>
 <a href="page-2.html" id="neighborhoods" style="text-decoration: none;">neighborhoods</a>
 <a href="page-8.html" id="archives" style="text-decoration: none;">archives</a>
 
-  <!-- 🌴 INPUT -->
+
   <input id="place" placeholder="where in LA?">
   <input id="text-input-entry" placeholder="your memory">
   <button onclick="submitText()">share</button>
 
-  <!-- 🌴 ARCHIVE -->
+
   <div id="chat-container"></div>
 
   <script>
-    // 🔑 FIREBASE CONFIG (replace with yours)
+   
     const firebaseConfig = {
       apiKey: "YOUR_API_KEY",
       authDomain: "YOUR_PROJECT.firebaseapp.com",
@@ -155,7 +155,7 @@
 
     const chatContainer = document.getElementById("chat-container");
 
-    // 📤 SUBMIT MEMORY
+
     function submitText() {
       const place = document.getElementById("place").value;
       const memory = document.getElementById("text-input-entry").value;
@@ -171,7 +171,7 @@
       document.getElementById("text-input-entry").value = "";
     }
 
-    // 📥 LIVE ARCHIVE DISPLAY
+ 
     dbRef.on("child_added", function(snapshot) {
       const data = snapshot.val();
 
