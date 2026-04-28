@@ -38,7 +38,7 @@
     #neighborhoods{
          position: absolute;
         top:2%;
-        left: 77%;
+        left: 79%;
         transform: translateX(-55%);
         width: 320px;  
         font-family: "Birds of Paradise  Personal use";
@@ -71,42 +71,50 @@
     
      #koreatown{
         position: absolute;
-        top: 48.7%;
-        left: 15%;
+        top: 35%;
+        left: 32%;
         transform: translateX(-55%);
         width: 220px;  
         
         }
      #westhollywood{
         position: absolute;
-        top: 50%;
-        left: 32%;
+        top: 35%;
+        left: 50%;
         transform: translateX(-55%);
-        width: 200px;  
+        width: 220px;  
         }
     
      #silverlake{
         position: absolute;
-        top: 46.5%;
-        left: 49%;
+        top: 35%;
+        left: 66%;
         transform: translateX(-55%);
-        width: 200px;  
+        width: 220px;  
         }
         
     #artdistrict{
         position: absolute;
-        top: 54%;
-        left: 65%;
+        top: 55%;
+        left: 32%;
         transform: translateX(-55%);
-        width: 210px;  
+        width: 220px;  
         }
     
-     #venice{
+     #santamonica{
         position: absolute;
-        top: 49%;
-        left: 83%;
+        top: 55%;
+        left: 50%;
         transform: translateX(-55%);
-        width: 170px;  
+        width: 220px;  
+        }
+        
+    #centralla{
+        position: absolute;
+        top: 55%;
+        left:66%;
+        transform: translateX(-55%);
+        width: 220px;  
         }
     
     #koreatownbutton{
@@ -180,10 +188,33 @@
          font-family: "Apple Garamond";
         font-weight: 500;
         font-style: normal;
-        font-size: 20px;
-        }
+        font-size: 20px; 
         }
         
+#koreatown,
+#westhollywood,
+#silverlake,
+#artdistrict,
+#santamonica,
+#centralla {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+#koreatown:hover,
+#westhollywood:hover,
+#silverlake:hover,
+#artdistrict:hover,
+#santamonica:hover,
+#centralla:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+    z-index: 1000;
+    filter: drop-shadow(0 0 25px rgba(128, 171, 215, 0.7));
+
+
     
     <body>
     </style>
@@ -192,15 +223,17 @@
      <a href="index.html"><p id="title"> Dear Los Angeles </p></a>
      <a href="page-1.html"><p id="about"> about</p></a>
      <a href="page-2.html"><p id="neighborhoods"> neigborhoods</p></a>
-     <a href="page-8.html"><p id="archives"> archives</p></a>
-    <a href="page-4.html"></a><img src="assets/koreatownenvelope.png" id="koreatown"/>
-    <a href="page-3.html"></a><img src="assets/westhollywoodenvelope.png" id="westhollywood"/>
-    <a href="page-5.html"></a><img src="assets/silverlakeenvelope.png" id="silverlake"/>
-    <a href="page-6.html"></a><img src="assets/blueenvelope.png" id="artdistrict"/>
-    <a href="page-7.html"></a><img src="assets/purpleenvelope.png" id="venice"/>
+     <a href="page-9.html"><p id="archives"> archives</p></a>
+        
+<a href="page-4.html"> <img src="assets/koreatownenvelope.png" id="koreatown"/></a>
+<a href="page-3.html"> <img src="assets/westhollywoodenvelope.png" id="westhollywood"/></a>
+<a href="page-5.html"> <img src="assets/silverlakeenvelope.png" id="silverlake"/></a>
+<a href="page-8.html"> <img src="assets/artdistrictenvelope.png" id="artdistrict"/></a>
+<a href="page-7.html"><img src="assets/santamonicaenvelope.png" id="santamonica"/></a>
+<a href="page-6.html"><img src="assets/centrallacenvelope.png" id="centralla"/></a>
   
-    
-    <p id="introtext"> Choose a neighborhood. Every place has a story, and every meal holds a memory.</p>
+<p id="introtext"> Choose a neighborhood. Every place has a story, and every meal holds a memory.</p>
+
     
     </body>
     </html>
