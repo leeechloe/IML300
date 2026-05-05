@@ -113,3 +113,7 @@ a {
 #archives {
   text-decoration: none;
 }
+
+body {
+  cursor: url("assets/fork.png"), auto;
+}
