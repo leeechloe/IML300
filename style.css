@@ -1,12 +1,12 @@
-#pechakucha:hover{ 
+#pechakuchatitle:hover{ 
             cursor:pointer;
-            color:#AEC7E0;
+            color:#BDDBF7;
             transition: color 0.3s
             }
 
 #ASMRWindow:hover{ 
             cursor:pointer;
-            color:#AEC7E0;
+            color:#BDDBF7;
             transition: color 0.3s
             }
 #TheThingIAlmostSaid:hover{
@@ -15,26 +15,56 @@
             transition: color 0.3s
             }
 
-#sketch1:hover{
+#DearLosAngeles:hover{
     cursor:pointer;
             color:#AEC7E0;
             transition: color 0.3s
             }
 
-#sketch2:hover{
+#vc1:hover{
     cursor:pointer;
-            color:#AEC7E0;
+            color:#CFE1B9;
             transition: color 0.3s
             }
 
-#sketch3:hover{
+#vc2:hover{
     cursor:pointer;
-            color:#AEC7E0;
+            color:#CFE1B9;
             transition: color 0.3s
             }
 
-#sketch4:hover{
+#vc3:hover{
     cursor:pointer;
-            color:#AEC7E0;
+            color:#CFE1B9;
+            transition: color 0.3s
+            }
+
+#vc4:hover{
+    cursor:pointer;
+            color:#CFE1B9;
+            transition: color 0.3s
+            }
+
+#vc5:hover{
+    cursor:pointer;
+            color:#CFE1B9;
+            transition: color 0.3s
+            }
+
+#vc6:hover{
+    cursor:pointer;
+            color:#CFE1B9;
+            transition: color 0.3s
+            }
+
+#vc7:hover{
+    cursor:pointer;
+            color:#CFE1B9;
+            transition: color 0.3s
+            }
+
+#vc8:hover{
+    cursor:pointer;
+            color:#CFE1B9;
             transition: color 0.3s
             }
