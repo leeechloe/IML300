@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thing I Almost Said</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        .container {
+            width: 390px;
+            height: 844px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #transitiontext {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 370px;
+        }
+
+        #staywithyoutext {
+            position: absolute;
+            top: 28%;
+            left: 47.3%;
+            transform: translateX(-55%);
+            width: 180px;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            color: black;
+        }
+
+        #startbutton {
+            position: absolute;
+            top: 760px;
+            left: 50.5%;
+            transform: translateX(-55%);
+            width: 130px;
+        }
+
+        #next {
+            position: absolute;
+            top: 761px;
+            left: 51.1%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="assets/transitiontext.png" id="transitiontext"/>
+    <p id="staywithyoutext"></p>
+    <img src="assets/startbutton.png" id="startbutton" width="80"/>
+    <a href="page-12.html"><p id="next">next</p></a>
+
+    <main></main>
+    <script src="sketch.js"></script>
+
+    <script>
+        const text = "Some sentences just… stay with you.";
+        const el = document.getElementById('staywithyoutext');
+        let i = 0;
+        setInterval(() => {
+            if (i < text.length) {
+                el.textContent += text[i];
+                i++;
+            }
+        }, 275);
+    </script>
+
+</body>
+</html>

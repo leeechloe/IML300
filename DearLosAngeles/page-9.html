@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Archives</title>
+
+  <style>
+    body {
+      background-color: #930500;
+      color: white;
+      font-family: sans-serif;
+      padding-top: 140px; 
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+   
+    #title{
+      position: absolute;
+      top: 0px;
+      left: 27%;
+      transform: translateX(-50%);
+      font-size: 40px;
+      width: 50%;
+      font-family: "Birds of Paradise  Personal use";
+      color: #80ABD7;
+    }
+
+    #about{
+      position: absolute;
+      top:2%;
+      left: 70%;
+      transform: translateX(-55%);
+      width: 320px;
+      font-family: "Birds of Paradise  Personal use";
+      color: #80ABD7;
+      font-size: 25px;
+      transition: all 0.3s ease;
+    }
+
+    #neighborhoods{
+      position: absolute;
+      top:2%;
+      left: 79%;
+      transform: translateX(-55%);
+      width: 300px;
+      font-family: "Birds of Paradise  Personal use";
+      color: #80ABD7;
+      font-size: 25px;
+      transition: all 0.3s ease;
+    }
+
+    #archives{
+      position: absolute;
+      top: 2%;
+      left: 92%;
+      transform: translateX(-55%);
+      width: 300px;
+      font-family: "Birds of Paradise  Personal use";
+      color: #80ABD7;
+      font-size: 25px;
+      transition: all 0.3s ease;
+    }
+
+    #about:hover,
+    #neighborhoods:hover,
+    #title:hover {
+      color: #683629;
+    }
+
+
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 12px;
+      width: 300px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 18px;
+      border-radius: 20px;
+      border: none;
+      background-color: #80ABD7;
+      color: white;
+      cursor: pointer;
+    }
+
+  
+    #chat-container {
+      margin-top: 40px;
+    }
+
+    .entry {
+      margin-bottom: 35px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .place {
+      font-size: 13px;
+      opacity: 0.6;
+      margin-bottom: 6px;
+    }
+
+    .memory {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+</head>
+
+<body>
+
+
+<a href="index.html" id="title" style="text-decoration: none;">Dear Los Angeles</a>
+<a href="page-1.html" id="about" style="text-decoration: none;">about</a>
+<a href="page-2.html" id="neighborhoods" style="text-decoration: none;">neighborhoods</a>
+<a href="page-8.html" id="archives" style="text-decoration: none;">archives</a>
+
+
+  <input id="place" placeholder="where in LA?">
+  <input id="text-input-entry" placeholder="your memory">
+  <button onclick="submitText()">share</button>
+
+
+  <div id="chat-container"></div>
+
+  <script>
+   
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT.firebaseapp.com",
+      databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
+      projectId: "YOUR_PROJECT"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.database();
+    const dbRef = db.ref("laArchive");
+
+    const chatContainer = document.getElementById("chat-container");
+
+
+    function submitText() {
+      const place = document.getElementById("place").value;
+      const memory = document.getElementById("text-input-entry").value;
+
+      if (!memory) return;
+
+      dbRef.push({
+        place: place || "somewhere in LA",
+        memory: memory,
+        time: Date.now()
+      });
+
+      document.getElementById("text-input-entry").value = "";
+    }
+
+ 
+    dbRef.on("child_added", function(snapshot) {
+      const data = snapshot.val();
+
+      const div = document.createElement("div");
+      div.className = "entry";
+
+      div.innerHTML = `
+        <div class="place">📍 ${data.place}</div>
+        <div class="memory">${data.memory}</div>
+      `;
+
+      chatContainer.prepend(div);
+    });
+
+  </script>
+
+</body>
+</html>

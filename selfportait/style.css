@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Betania+Patmos&display=swap');
+
+#selfportait {
+    border: 3px dotted pink; 
+}
+
+h1{
+  font-family: "Betania Patmos", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+

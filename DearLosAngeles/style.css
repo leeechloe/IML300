@@ -1,0 +1,119 @@
+#about:hover {
+          color: #683629;
+        }
+#neighborhoods:hover {
+          color: #683629;
+        }
+#title:hover {
+          color: #683629;
+        }
+#archives:hover {
+          color: #683629;
+        }
+
+#checkout:hover {
+    color: #683629;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+
+#koreatown,
+#westhollywood,
+#silverlake,
+#artdistrict,
+#santamonica,
+#centralla {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+#koreatown,
+#westhollywood,
+#silverlake,
+#artdistrict,
+#santamonica,
+#centralla {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#koreatown:hover,
+#westhollywood:hover,
+#silverlake:hover,
+#artdistrict:hover,
+#santamonica:hover,
+#centralla:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(178, 14, 25, 0.6));
+}
+
+
+body {
+  background-color: #930500;
+  color: white;
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 300px;
+  border-radius: 14px;
+  border: none;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #80ABD7;
+  color: white;
+  cursor: pointer;
+}
+
+#chat-container {
+  margin-top: 40px;
+}
+
+.entry {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  animation: fadeIn 1s forwards;
+}
+
+.place {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.memory {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#title,
+#about,
+#neighborhoods,
+#archives {
+  text-decoration: none;
+}
+
+body {
+  cursor: url("assets/fork.png"), auto;
+}

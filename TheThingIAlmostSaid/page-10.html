@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thing I Almost Said</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+       #bothfolder {
+            position: absolute;
+            top: 10%;
+            left: 53%;
+            transform: translateX(-55%);
+            width: 70%;
+        }
+        #next { 
+         position: absolute;
+             top: 800px;
+             left: 80%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        #back { 
+         position: absolute;
+             top: 800px;
+             left: 20%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        
+        #accunfollowedtext {
+            position: absolute;
+             top: 45%;
+             left: 40.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
+        
+        #accidentallyunfollowed {
+            position: absolute;
+            top: 200px;
+            left: 41.2%;
+            transform: translateX(-50%);
+            width: 100px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        #draftagaintext {
+            position: absolute;
+             top: 39%;
+             left: 51.3%;
+            transform: translateX(-55%);
+            width: 100px;
+            font-family:"Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10px;
+            color: black;   
+        }
+        #draftagain {
+            position: absolute;
+            top: 200px;
+            left: 51%;
+            transform: translateX(-50%);
+            width: 150px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        #overlayaccunfollow, #overlaydraftagain {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 99;
+            cursor: pointer;
+        }
+        
+        #bigaccunfollow, #bigdraftagain {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+        }
+    
+        
+  </style>
+</head>
+<body>
+
+<a href="page-7.html"><p id="next">next</p></a>
+<a href="page-5.html"><p id="back">back</p></a>
+<img src="assets/Both%20Folder.png" id="bothfolder"/>
+
+<!-- accidentally_unfollowed.convo-->
+ <p id="accunfollowedtext">accidentally_unfollowed.convo</p>
+<img src="assets/accidentally_unfollowed.convo.png" id="accidentallyunfollowed"/>
+<div id="overlayaccunfollow">
+<img src="assets/accidentally_unfollowed.convo.png" id="bigaccunfollow"/>
+</div>
+<script>
+const accidentally_unfollowed = document.getElementById('accidentallyunfollowed');
+const overlayaccunfollow = document.getElementById('overlayaccunfollow');
+
+accidentally_unfollowed.addEventListener('click', () => {
+    overlayaccunfollow.style.display = 'block';
+});
+overlayaccunfollow.addEventListener('click', () => {
+    overlayaccunfollow.style.display = 'none';
+});
+</script>
+ <!-- draftagain-->
+     <p id="draftagaintext">draft_again.text</p>
+    <img src="assets/draft_again.png" id="draftagain"/> 
+    <div id="overlaydraftagain">
+    <img src="assets/draft_again.png" id="bigdraftagain"/>
+    </div>
+    
+    <script> 
+        const draft_again = document.getElementById('draftagain');
+        const overlaydraftagain = document.getElementById('overlaydraftagain');
+        draft_again.addEventListener('click', () => {
+            overlaydraftagain.style.display = 'block';
+        });
+        overlaydraftagain.addEventListener('click', () => {
+            overlaydraftagain.style.display = 'none';
+        });
+    </script>  
+</body>
+</html>

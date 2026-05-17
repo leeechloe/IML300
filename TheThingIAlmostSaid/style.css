@@ -1,0 +1,294 @@
+
+/*index */
+#indexmessage {     
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imessagetext {
+    position: absolute;
+    top: 180px;
+    left: 41%;      
+    width: 200px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    text-align: left;
+    white-space: pre-wrap;
+    color: black;
+    z-index: 1;
+}
+
+#instructions {
+    position: absolute;
+    top: 43.5%;
+    left: 33.5%;
+    width: 420px;
+    font-family: "Inter", sans-serif;
+    font-size: 8.6px;  
+    z-index: 1;
+}
+
+ #pressstart:hover{ 
+color: whitesmoke;
+transition: color 0.3s
+}
+/*index*/ 
+
+
+/*page 2*/ 
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #EEDAE6;
+    text-align: center;
+}
+   
+#matchatext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+#chocolatetext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+#strawberrytext:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+     cursor: pointer;
+}
+
+#idk:hover {
+    color: whitesmoke;
+    transition: color 0.3s;
+}
+
+#idk {
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s;
+}
+h1 {
+    font-family: "Inter", sans-serif;
+}
+/*page 2*/ 
+
+/*page 3*/
+
+/*page 3*/
+
+
+
+
+/* page 4 */ 
+#next:hover{ 
+cursor:pointer;
+color:white;
+transition: color 0.3s
+}
+#back:hover { 
+cursor:pointer;
+color:whitesmoke;
+transition: color 0.3s
+}
+#back:hover { 
+cursor:pointer;
+color:whitesmoke;
+transition: color 0.3s
+}
+/* page 4 */ 
+
+/* page 5*/ 
+#wallpaper {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);  
+    height: calc(100% + 40px);
+    z-index: 0;
+}
+/* page 5*/ 
+
+
+/* page 6*/ 
+#ilikeyou:hover{ 
+cursor: pointer; 
+color:whitesmoke;
+transition: color 0.3s
+}
+#thathurt:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#imissyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#imnotokay:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#ilikeyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#stay:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+#ineededyou:hover{ 
+cursor: pointer; 
+color:lightpink;
+transition: color 0.3s
+}
+
+#ilikeyou{ 
+     position: absolute;
+     top: 300px;
+      left: 50%;
+     transform: translateX(-55%);
+     width: 300px;
+     font-family:"Inter", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+      font-size: 15px;
+     color: white; 
+}
+#thathurt{ 
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#imissyou{ 
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#imnotokay {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#stay{ 
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#ineededyou{ 
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white; 
+}
+#refresh{ 
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black; 
+}
+/* page 6*/ 
+
+/* page 7*/ 
+#next:hover{ 
+cursor:pointer;
+color:white;
+transition: color 0.3s
+}
+
+#before:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#after:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#both:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+#no:hover{ 
+cursor: pointer; 
+color:black;
+transition: color 0.3s
+}
+/* page 7*/ 
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#text1 {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 300px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: whitesmoke;
+    animation: fadeIn 5s ease-in;
+}
+
+/* page 8*/ 
+#next:hover{ 
+cursor:pointer;
+color: blue;
+transition: color 0.3s
+}
+
+#back:hover{ 
+cursor:pointer;
+color: blue;
+transition: color 0.3s
+}
+/* page 8*/ 
+
+

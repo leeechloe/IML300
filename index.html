@@ -3,47 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <title>Chloe's Homepage</title>
-    <!--Update with your name-->
-  </head>
+   <link rel="stylesheet" href="style.css">
+    <style>
+        hmtl {
+        height: 100%; 
+        margin:0; 
+        }
+        body{ 
+          min-height: 100vh;
+         margin: 0;
+         background-image: url(assets/wallpaper2.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+        
+        #nametag{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        }
+    
+    #subtext { 
+        position: absolute;
+         text-align: center;
+         top: 67%;
+         left: 52%;
+         transform: translateX(-55%);
+        font-family:"Inter", sans-serif;
+        font-weight: 600;
+         width: 80%;
+        color: whitesmoke;  
+      }
+        
+        
+    #mainprojects { 
+        position: absolute;
+         text-align: center;
+         top: 90%;
+         left: 52%;
+         transform: translateX(-55%);
+        font-family:"Inter", sans-serif;
+        font-weight: 600;
+         width: 100;
+        font-size: 40px;
+        color: whitesmoke;  
+      }
+    
+     #butterflybutton{
+      position: absolute;
+      top: 75%;
+      left: 30%;
+      transform: translateX(-55%);
+      width: 150px;    
+     }
 
-  <body>
-    <div>
-      <h1>Chloe Lee🪽</h1>
-      <!--Update with your name-->
-      <p>
-        This is my website for <i>IML300 class</i>. i like ice cream and miffy.
-      </p>
-    </div>
+    #flowerbutton{
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translateX(-55%);
+      width: 150px;    
+     }
 
-    <div>
-      <h1>Presentation</h1>
-      <a href="">Pecha Kucha: Lorem Ipsum</a>
-    </div>
+    #cloverbutton{
+      position: absolute;
+      top: 75%;
+      left: 70%;
+      transform: translateX(-55%);
+      width: 180px;    
+     }
+        
+        
 
-    <div>
-      <h1>Projects</h1>
-      <h2>Project 1: Interactive Audio & Visual with p5.js</h2>
-      <a href="">Final: Lorem Ipsum</a>
-      <h2>Project 2: HyperNarrative</h2>
-      <a href="">Concept</a><br />
-      <a href="">Final: Lorem Ipsum</a>
-      <h2>Project 3: Networked Care</h2>
-      <a href="">Final: Lorem Ipsum</a>
-    </div>
-
-    <div>
-      <h1>Exercises</h1>
-      <ul>
-        <li><a href="">p5.js sketch 1</a></li>
-        <li><a href="">p5.js sketch 2</a></li>
-        <li><a href="">p5.js sketch 3</a></li>
-        <li><a href="">p5.js sketch 4</a></li>
-      </ul>
-    </div>
-
-    <!--add a h1 element called 'Thoughts' Below-->
-    <h1>Thoughts</h1>
-
-    <footer>Spring, 2026.</footer>
-  </body>
+ </style>
+</head>
+<body>
+<img src="assets/nametag.png" id="nametag"/>
+<p id="subtext">This is my website for <i>IML300 class</i>. My name is Chloe Lee, and I am currently a 3rd year student at USC, studying Media Arts + Practice! </p>
+<a href="page-2.html"> <img src="assets/butterflybutton.png" id="butterflybutton"/></a>
+<a href="page-3.html"> <img src="assets/flowerbutton.png" id="flowerbutton"/></a>
+<a href="page-4.html"> <img src="assets/cloverbutton.png" id="cloverbutton"/></a>
+</body>
 </html>

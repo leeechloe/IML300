@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thing I Almost Said</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        
+       #idofolder {
+           position: absolute;
+        top: 10%;
+        left: 53%;
+        transform: translateX(-55%);
+        width: 70%;
+        z-index: 0;
+        }
+        
+        #next { 
+         position: absolute;
+             top: 800px;
+             left: 80%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        #back { 
+         position: absolute;
+             top: 800px;
+             left: 20%;
+            transform: translateX(-55%);
+            width: 300px;
+            font-family:"Inter", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            color: white;    
+        }
+        
+        #filecorrupted {
+        position: absolute;
+        top: 200px;
+        left: 41%;
+        transform: translateX(-50%);
+        width: 150px;  
+        cursor: pointer;
+        z-index: 2;  
+    }
+        
+    </style>
+</head>
+<body>
+
+<a href="page-7.html"><p id="next">next</p></a>
+<a href="page-5.html"><p id="back">back</p></a>
+<img src="assets/IDO%20Folder.png" id="idofolder"/>
+<img src="assets/filecorrupted.png" id="filecorrupted"/>
+
+
+</body>
+</html>
